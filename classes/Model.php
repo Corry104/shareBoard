@@ -1,5 +1,4 @@
 <?php
-
 abstract class Model
 {
     protected $dbh;
@@ -13,9 +12,9 @@ abstract class Model
     public function query($query)
     {
         $this->stmt = $this->dbh->prepare($query);
-
     }
 
+    //Binds the prep statement
     public function bind($param, $value, $type = null)
     {
         if (is_null($type)) {
@@ -33,7 +32,6 @@ abstract class Model
                     $type = PDO::PARAM_STR;
             }
         }
-
         $this->stmt->bindValue($param, $value, $type);
     }
 
@@ -42,10 +40,9 @@ abstract class Model
         $this->stmt->execute();
     }
 
-    public function resultset()
+    public function resultSet()
     {
         $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
 }
