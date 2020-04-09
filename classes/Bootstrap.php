@@ -36,7 +36,7 @@ class Bootstrap
                     return;
                 }
             } else {
-                // Base Controller oes Not Exist
+                // Base Controller Does Not Exist
                 echo '<h1>Base Controller Not Found</h1>';
                 return;
             }
