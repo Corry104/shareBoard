@@ -3,7 +3,7 @@
 // Define DB Params
 define("DB_HOST", "localhost");
 define("DB_USER", "root");
-define("DB_PASS", "password");
+define("DB_PASS", "Alpha242!");
 define("DB_NAME", "shareboard");
 
 // Define URL
